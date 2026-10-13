@@ -1,0 +1,12 @@
+{
+  "id": "./",
+  "name": "Back to Strong",
+  "short_name": "Back to Strong",
+  "description": "Your first step back to feeling strong.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f9f5",
+  "theme_color": "#25583f",
+  "icons": [{ "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

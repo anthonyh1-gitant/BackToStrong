@@ -1,0 +1,64 @@
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #283b33;
+  background: #f8f9f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #f8f9f5;
+  --surface: #fff;
+  --surface-soft: #f0f4ee;
+  --text: #283b33;
+  --muted: #5d6b60;
+  --border: #e5e9e1;
+  --green: #236246;
+  --green-bright: #357454;
+  --green-soft: #e9f1e8;
+  --warm: #f2eee3;
+  --danger: #9d342f;
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  --bg: #181f1c;
+  --surface: #212a25;
+  --surface-soft: #28352c;
+  --text: #ebf0e9;
+  --muted: #afbbb0;
+  --border: #39443b;
+  --green: #a0d4a9;
+  --green-bright: #b8e4bf;
+  --green-soft: #304537;
+  --warm: #322e23;
+  --danger: #ffafa5;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+a { color: var(--green); }
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--green-bright); outline-offset: 4px; }
+input:focus-visible, textarea:focus-visible { outline-offset: 1px; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(2rem, 3vw, 2.7rem); font-weight: 600; line-height: 1.18; letter-spacing: -.055em; }
+h2 { font-size: 1.5rem; font-weight: 600; letter-spacing: -.04em; line-height: 1.25; }
+h3 { font-size: 1.02rem; font-weight: 600; letter-spacing: -.02em; line-height: 1.4; }
+p { line-height: 1.65; }
+svg { flex-shrink: 0; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 28px 0; }
+fieldset { border: 0; padding: 0; margin: 0 0 28px; min-width: 0; }
+legend, label:not(.checkbox-row) { display: block; font-weight: 600; font-size: .9rem; margin-bottom: 12px; }
+input:not([type='checkbox']), textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 9px; color: var(--text); min-height: 46px; padding: 12px; }
+textarea { min-height: 105px; resize: vertical; line-height: 1.6; }
+input::placeholder, textarea::placeholder { color: var(--muted); }
+input[type='checkbox'] { width: 19px; height: 19px; accent-color: var(--green); flex-shrink: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  button, a { transition: background .18s, color .18s, border-color .18s; }
+  .dialog, .toast { animation: appear .18s ease-out; }
+  @keyframes appear { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+}
